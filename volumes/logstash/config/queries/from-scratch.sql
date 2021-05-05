@@ -1,1 +1,1 @@
-SELECT * FROM books.books
+SELECT * FROM sales.facturas
