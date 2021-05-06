@@ -23,7 +23,7 @@ services:
   mysql:
     image: mysql:8
     container_name: MySQL-Container
-    # restart: on-failure
+    restart: always
     ports:
       - 3306:3306
     environment:
@@ -31,6 +31,7 @@ services:
       MYSQL_DATABASE: sales
       MYSQL_USER: Adminbd
       MYSQL_PASSWORD: Passwordbd
+      - VIRTUAL_HOST=mysql.ti.net
     volumes:
       # Dump files for initiating tables
       - ./data/:/docker-entrypoint-initdb.d/
@@ -78,7 +79,7 @@ services:
       context: .
       dockerfile: Dockerfile-logstash
     container_name: Logstash-Container
-    # restart: on-failure
+    restart: always
     depends_on:
       - mysql
       - elasticsearch
