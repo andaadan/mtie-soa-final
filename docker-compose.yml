@@ -31,7 +31,7 @@ services:
       MYSQL_DATABASE: sales
       MYSQL_USER: Adminbd
       MYSQL_PASSWORD: Passwordbd
-      - VIRTUAL_HOST=mysql.ti.net
+      VIRTUAL_HOST: mysql.ti.net
     volumes:
       # Dump files for initiating tables
       - ./data/:/docker-entrypoint-initdb.d/
