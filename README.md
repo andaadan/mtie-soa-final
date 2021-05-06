@@ -4,32 +4,37 @@
 
 ### Inscrucciones a seguir:
 
-### Clonar repositorio
+### Paso 1 Clonar repositorio
 ```
 git clone https://github.com/andaadan/mtie-soa-final.git
 ```
 
-### Ingresar al directorio de instalación
+### De ser necesario, configurar la ejecucion de git, y repetir paso anterior
+```
+alias git="docker run -ti --rm -v $(pwd):/git bwits/docker-git-alpine"
+```
+
+### Paso 2 Ingresar al directorio de instalación
 ```
 cd mtie-soa-final/
 ```
 
-### Mover archivo de instalación a directorio raíz
+### Paso 3 Mover archivo de instalación a directorio raíz
 ```
 sudo mv install.sh ../
 ```
 
-### Salir a directorio raíz
+### Paso 4 Salir a directorio raíz
 ```
 cd ..
 ```
 
-### Conceder permisos de ejecución
+### Paso 5 Conceder permisos de ejecución
 ```
 sudo chmod +x install.sh
 ```
 
-### Ejecutar instalador
+### Paso 6 Ejecutar instalador
 ```
 ./install.sh
 ```
