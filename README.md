@@ -19,6 +19,11 @@ cd mtie-soa-final/
 sudo mv install.sh ../
 ```
 
+### Salir a directorio raíz
+```
+cd ..
+```
+
 ### Conceder permisos de ejecución
 ```
 sudo chmod +x install.sh
